@@ -1,0 +1,16 @@
+CONFIG_NAME: 'bird'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '/data1/phd21_zhaorui_tan/data_raw/birds'
+GPU_ID: 0
+WORKERS: 4
+
+B_VALIDATION: True # True  # False
+loss: 'hinge'
+
+TREE:
+  BRANCH_NUM: 1
+  BASE_SIZE: 256
+
+HNSC:
+  R: 0.1

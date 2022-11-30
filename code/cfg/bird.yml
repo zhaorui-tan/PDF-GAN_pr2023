@@ -1,0 +1,31 @@
+CONFIG_NAME: 'bird'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '/data1/phd21_zhaorui_tan/data_raw/birds'
+GPU_ID: 0
+WORKERS: 1
+WARM_UP: 50
+
+B_VALIDATION: False # True  # False
+loss: 'hinge'
+
+TREE:
+  BRANCH_NUM: 1
+  BASE_SIZE: 256
+
+
+TRAIN:
+  NF: 64 # default 64
+  BATCH_SIZE: 32  #24
+  MAX_EPOCH: 600
+  #  NET_G: '/data1/phd21_zhaorui_tan/DF-GAN-ffc-15-2/output/birds_bird_2022_05_05_15_52_43/models/bird/netG_060.pth'
+  #  NET_G: '/data1/phd21_zhaorui_tan/DF-GAN-ffc-15/output/birds_bird_2022_05_04_20_20_28/models/bird/netG_150.pth'
+  NET_G: '/data1/phd21_zhaorui_tan/DF-GAN-ffc-15/output/dfffc15_50_warmup/models/bird/netG_050.pth'
+#  NET_G: '/data1/phd21_zhaorui_tan/DF-GAN-ffc-21/output/birds_bird_2022_07_24_13_43_27/models/bird/netG_353.pth'
+#  NET_G: '/data1/phd21_zhaorui_tan/DF-GAN-ffc-21/output/birds_bird_2022_07_30_10_42_47/models/bird/netG_382.pth'
+#  NET_G: ''
+
+TEXT:
+  EMBEDDING_DIM: 256
+  CAPTIONS_PER_IMAGE: 10
+  DAMSM_NAME: '/data1/phd21_zhaorui_tan/DAMSMencoders/bird/text_encoder200.pth'
